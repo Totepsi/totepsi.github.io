@@ -3,61 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ziryl the Zayot</title>
+  <title>Ziryl</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-    }
-
-    .hero-image {
-      background-image: url('ziryl.png');
-      background-size: cover;
-      background-position: center;
-      height: 1080px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
+      height: 100%;
       width: 100%;
     }
 
-    .hero-text {
-      padding: 20px;
+    .container {
+      display: flex;
+      height: 100vh;
     }
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      border: none;
+    .left {
+      background-image: url('grey.png');
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .content {
       padding: 20px;
-      text-align: center;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    .right {
+      background-image: url('ziryl.png');
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    .hero-text p {
+      margin: 10px 0;
+      font-size: 1.5em;
     }
   </style>
 </head>
 <body>
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>I am Ziryl</h1>
-      <p>And I'm a Zayot</p>
-      <button>Purchase Me</button>
+  <div class="container">
+    <div class="left">
+      <div class="hero-text">
+        <h1>I am Ziryl</h1>
+        <p>And I'm a Zayot</p>
+        <p>Ziryl not working? <a href="#" style="color: #4CAF50;">Try whipping him!</a></p>
+      </div>
     </div>
-  </div>
-  <div class="content">
-    <p>This is some additional content below the hero section.</p>
+    <div class="right"></div>
   </div>
 </body>
 </html>
